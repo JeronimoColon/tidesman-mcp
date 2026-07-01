@@ -1,0 +1,86 @@
+TIDESMAN END USER LICENSE AGREEMENT
+
+Last updated: June 30, 2026
+
+This End User License Agreement ("Agreement") is a legal agreement between you ("You" or
+"Licensee") and Jeronimo Colon III ("Licensor") for the Tidesman software, including its
+executable binaries and any accompanying documentation (collectively, the "Software"). By
+downloading, installing, or using the Software, You agree to be bound by this Agreement. If You do
+not agree, do not download, install, or use the Software.
+
+1. License Grant.
+Subject to Your compliance with this Agreement, Licensor grants You a personal, non-exclusive,
+non-transferable, non-sublicensable, revocable license to install and use the Software on
+Apple-branded devices running macOS that You own or control, for Your own personal or internal
+business purposes. The Software is provided to You free of charge.
+
+2. Restrictions.
+You shall not, and shall not permit any third party to: (a) copy, distribute, sell, rent, lease,
+sublicense, or otherwise transfer the Software; (b) modify, adapt, translate, or create derivative
+works of the Software; (c) reverse engineer, decompile, or disassemble the Software, or attempt to
+derive its source code, except to the extent this restriction is prohibited by applicable law;
+(d) remove, alter, or obscure any proprietary notices in or on the Software; (e) use the Software
+to develop a competing product or service; or (f) use the Software in violation of any applicable
+law or regulation.
+
+3. Ownership.
+The Software is licensed, not sold. Licensor and its licensors retain all right, title, and
+interest in and to the Software, including all intellectual property rights. No rights are granted
+to You except as expressly set forth in this Agreement.
+
+4. Third-Party Components.
+The Software incorporates third-party open-source components that are licensed under their own
+terms. Those terms are set out in the accompanying THIRD-PARTY-LICENSES file and govern Your use of
+those components. To the extent any such third-party license conflicts with this Agreement with
+respect to those components, the third-party license controls for those components.
+
+5. Operation of the Software; Your Responsibility.
+The Software is a tool that issues commands to, and manages, software containers and related
+resources on Your system, including on Your instruction or the instruction of any client You
+connect to it (which may include automated or AI-driven clients). You are solely responsible for
+the commands executed and for the resources created, modified, or deleted through Your use of the
+Software, and for maintaining appropriate backups. Licensor is not responsible for any loss of data
+or other consequences resulting from those operations.
+
+6. Updates.
+Licensor may, but is not obligated to, provide updates, upgrades, or support for the Software. Any
+updates Licensor provides are subject to this Agreement unless they are accompanied by a separate
+license, in which case that license governs.
+
+7. Disclaimer of Warranties.
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL
+BE UNINTERRUPTED, ERROR-FREE, OR SECURE.
+
+8. Limitation of Liability.
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL LICENSOR BE LIABLE FOR ANY
+INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, OR FOR ANY LOSS OF DATA,
+PROFITS, OR BUSINESS, ARISING OUT OF OR RELATED TO THE SOFTWARE OR THIS AGREEMENT, EVEN IF ADVISED
+OF THE POSSIBILITY OF SUCH DAMAGES. LICENSOR'S TOTAL AGGREGATE LIABILITY UNDER THIS AGREEMENT WILL
+NOT EXCEED FIFTY U.S. DOLLARS (US $50). Some jurisdictions do not allow certain limitations of
+liability, so some of the above limitations may not apply to You.
+
+9. Term and Termination.
+This Agreement is effective until terminated. It terminates automatically and immediately if You
+breach any of its terms. Upon termination, You must cease all use of the Software and delete all
+copies in Your possession or control. Sections 3, 4, and 7 through 13 survive termination.
+
+10. Export Compliance.
+You agree to comply with all applicable export and import laws and regulations in connection with
+Your use of the Software.
+
+11. Governing Law.
+This Agreement is governed by the laws of the State of New Jersey, United States, without regard to
+its conflict-of-laws principles. You agree that any dispute arising out of or relating to this
+Agreement or the Software will be brought exclusively in the state or federal courts located in New
+Jersey, and You consent to the personal jurisdiction of those courts.
+
+12. Entire Agreement; Severability.
+This Agreement is the entire agreement between You and Licensor regarding the Software and
+supersedes all prior or contemporaneous understandings. If any provision of this Agreement is held
+unenforceable, that provision will be modified to the minimum extent necessary, and the remaining
+provisions will remain in full force and effect.
+
+13. Contact.
+Questions about this Agreement may be directed to: legal@tidesman.dev

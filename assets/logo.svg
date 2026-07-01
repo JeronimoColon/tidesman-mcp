@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 100 100" role="img" aria-label="Tidesman app icon">
+  <defs>
+    <clipPath id="tm-sq"><rect width="100" height="100" rx="23"></rect></clipPath>
+    <linearGradient id="tm-bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#1BAAC0"></stop>
+      <stop offset="0.55" stop-color="#187E9E"></stop>
+      <stop offset="1" stop-color="#103E63"></stop>
+    </linearGradient>
+    <linearGradient id="tm-white" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"></stop>
+      <stop offset="1" stop-color="#DCEBF0"></stop>
+    </linearGradient>
+    <linearGradient id="tm-amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFDD92"></stop>
+      <stop offset="1" stop-color="#FF9F3C"></stop>
+    </linearGradient>
+    <radialGradient id="tm-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFD98A" stop-opacity="0.75"></stop>
+      <stop offset="1" stop-color="#FFD98A" stop-opacity="0"></stop>
+    </radialGradient>
+    <linearGradient id="tm-gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.22"></stop>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"></stop>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#tm-sq)">
+    <rect width="100" height="100" fill="url(#tm-bg)"></rect>
+    <path d="M0 79 Q 14 74 27 79 T 54 79 T 81 79 T 108 79 V101 H0 Z" fill="#fff" opacity="0.09"></path>
+    <path d="M0 86 Q 14 81 27 86 T 54 86 T 81 86 T 108 86 V101 H0 Z" fill="#fff" opacity="0.13"></path>
+    <circle cx="50" cy="54" r="24" fill="url(#tm-glow)"></circle>
+    <circle cx="50" cy="54" r="15" fill="url(#tm-glow)" opacity="0.55"></circle>
+    <g transform="translate(0 5) translate(50 46) scale(1.14) translate(-50 -46)">
+      <path d="M43.5 34 Q 43.5 21 50 20 Q 56.5 21 56.5 34" fill="none" stroke="url(#tm-white)" stroke-width="2.4" stroke-linecap="round"></path>
+      <circle cx="50" cy="16.4" r="2.8" fill="none" stroke="url(#tm-white)" stroke-width="2.2"></circle>
+      <rect x="46.5" y="31" width="7" height="3.4" rx="1.2" fill="url(#tm-white)"></rect>
+      <path d="M40 39 L60 39 L56 34 L44 34 Z" fill="url(#tm-white)"></path>
+      <rect x="38.5" y="38.6" width="23" height="2.4" rx="1" fill="url(#tm-white)"></rect>
+      <rect x="38" y="41" width="24" height="21" rx="4" fill="url(#tm-white)"></rect>
+      <rect x="40.6" y="43.4" width="18.8" height="16.2" rx="2.4" fill="url(#tm-amber)"></rect>
+      <ellipse cx="50" cy="52" rx="3" ry="5.4" fill="#FFF6DE" opacity="0.9"></ellipse>
+      <rect x="46.4" y="43.4" width="1.6" height="16.2" fill="url(#tm-white)"></rect>
+      <rect x="52" y="43.4" width="1.6" height="16.2" fill="url(#tm-white)"></rect>
+      <rect x="40.6" y="50.6" width="18.8" height="1.5" fill="url(#tm-white)"></rect>
+      <rect x="42" y="62" width="16" height="3" rx="1" fill="url(#tm-white)"></rect>
+      <path d="M41.5 65 L58.5 65 L56 72 L44 72 Z" fill="url(#tm-white)"></path>
+      <rect x="45" y="72" width="10" height="2.6" rx="1.2" fill="url(#tm-white)"></rect>
+    </g>
+    <rect width="100" height="100" fill="url(#tm-gloss)"></rect>
+  </g>
+</svg>
