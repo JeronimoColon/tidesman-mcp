@@ -5,7 +5,7 @@
 <h1 align="center">Tidesman</h1>
 
 <p align="center">
-  A native MCP server for running, understanding, and debugging Linux containers with Apple's <code>container</code> tool.
+  A free native MCP server for running, understanding, and debugging Linux containers with Apple's <code>container</code> tool.
 </p>
 
 <p align="center">
