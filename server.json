@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.tidesman/tidesman",
+  "title": "Tidesman",
+  "description": "A free native MCP server for running and debugging Linux containers with Apple's container tool.",
+  "version": "0.1.1",
+  "websiteUrl": "https://tidesman.dev",
+  "repository": {
+    "url": "https://github.com/JeronimoColon/tidesman-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/JeronimoColon/tidesman-mcp/releases/download/v0.1.1/tidesman-0.1.1.mcpb",
+      "version": "0.1.1",
+      "fileSha256": "ec8f0e2c9edf64b92963760afa78a97b362ab72e789d68be34269b34d0747685",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
