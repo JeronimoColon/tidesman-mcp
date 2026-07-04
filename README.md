@@ -158,6 +158,22 @@ container's isolation onto your real files.
 - Audited. Every tool call is recorded to `~/Library/Logs/tidesman/audit.log` and the macOS
   unified log: its name, its arguments (with secret-like values redacted), and its outcome.
 
+## Privacy Policy
+
+Tidesman collects nothing about you and sends nothing to us: no telemetry, no analytics, no
+crash reporting, no accounts. Everything it does happens on your Mac.
+
+- The audit log (tool calls, arguments with secret-like values redacted, outcomes) is written
+  only to your Mac (`~/Library/Logs/tidesman/audit.log` and the macOS unified log) and stays
+  there unless you share it yourself. Delete it whenever you like.
+- Tidesman opens no network ports. Its only outbound connection is to a container registry
+  (such as Docker Hub) when you or your assistant asks it to pull an image; that request shares
+  the image name and your network address with the registry, like any container tool.
+- Nothing is shared with, sold to, or retained by anyone else.
+
+The full policy lives at [tidesman.dev/privacy.html](https://tidesman.dev/privacy.html).
+Privacy questions: [legal@tidesman.dev](mailto:legal@tidesman.dev).
+
 ## License
 
 Tidesman is proprietary software, provided free of charge under the end-user license in
