@@ -164,6 +164,9 @@ container's isolation onto your real files.
   require an explicit flag.
 - Audited. Every tool call is recorded to `~/Library/Logs/tidesman/audit.log` and the macOS
   unified log: its name, its arguments (with secret-like values redacted), and its outcome.
+- Honest tool annotations. Every tool declares MCP read-only and destructive hints that match
+  what it can actually touch, so your client knows the stakes and can ask before anything
+  risky runs.
 
 ## Privacy Policy
 
