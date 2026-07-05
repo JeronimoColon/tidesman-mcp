@@ -3,7 +3,7 @@
   "name": "dev.tidesman/tidesman",
   "title": "Tidesman",
   "description": "A free native MCP server for running and debugging Linux containers with Apple's container tool.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://tidesman.dev",
   "repository": {
     "url": "https://github.com/JeronimoColon/tidesman-mcp",
@@ -12,9 +12,9 @@
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/JeronimoColon/tidesman-mcp/releases/download/v0.1.1/tidesman-0.1.1.mcpb",
-      "version": "0.1.1",
-      "fileSha256": "ec8f0e2c9edf64b92963760afa78a97b362ab72e789d68be34269b34d0747685",
+      "identifier": "https://github.com/JeronimoColon/tidesman-mcp/releases/download/v0.1.2/tidesman-0.1.2.mcpb",
+      "version": "0.1.2",
+      "fileSha256": "207be556bf2df2442d37f8253bc314b4abb178d6cb6e88119abedc460ebfc1c2",
       "transport": {
         "type": "stdio"
       }
