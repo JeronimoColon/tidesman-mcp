@@ -2,6 +2,18 @@
 
 Notable changes to Tidesman. This project follows [Semantic Versioning](https://semver.org).
 
+## [0.1.3] - 2026-07-05
+
+- Every tool is now advertised in every access mode; the mode controls which ones may run,
+  and a tool the mode locks says so in its description and names the mode that unlocks it. An
+  assistant can see the full set of container tools even in read-only mode, so it knows what
+  Tidesman can do and how to ask for more.
+- The server now sends usage guidance when a client connects (what it is, the access modes,
+  and how the user raises the mode), and `system_ping` reports the modes, what each unlocks,
+  and how to change them.
+- Tool descriptions are more thorough, including a note that a container needs a long-running
+  command if you want to run further commands inside it.
+
 ## [0.1.2] - 2026-07-05
 
 - Every tool now carries a human-readable title and complete MCP annotations (read-only,
