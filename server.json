@@ -5,6 +5,18 @@
   "description": "A free native MCP server for running and debugging Linux containers with Apple's container tool.",
   "version": "0.1.2",
   "websiteUrl": "https://tidesman.dev",
+  "icons": [
+    {
+      "src": "https://tidesman.dev/assets/tidesman-icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"]
+    },
+    {
+      "src": "https://tidesman.dev/assets/apple-touch-icon.png",
+      "mimeType": "image/png",
+      "sizes": ["180x180"]
+    }
+  ],
   "repository": {
     "url": "https://github.com/JeronimoColon/tidesman-mcp",
     "source": "github"
