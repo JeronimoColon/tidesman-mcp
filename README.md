@@ -139,14 +139,17 @@ tool changes a container's state but never removes it; the container survives an
 inspected or restarted. **Destructive** is reserved for removing the container itself. Your MCP
 client may separately mark some write tools (exec, stop, kill) as destructive, based on the MCP
 hints each tool carries: those tools can end work or change data inside a container, even
-though the container itself survives.
+though the container itself survives. In every mode, all nine tools stay visible to your
+assistant; a tool the mode locks says so in its description and refuses until you raise the
+mode.
 
 ## Access modes: safe by default
 
 Tidesman runs at one of three authority levels, set with `--mode=`, and it starts in the
-safest one. If no `--mode` is given, it is read-only.
+safest one. If no `--mode` is given, it is read-only. Every tool is always listed to your
+assistant; the mode controls which of them may run.
 
-| Mode | Allows | Tools available |
+| Mode | Allows | Tools callable |
 |---|---|---|
 | `read-only` (default) | Read | ping, list, inspect, logs (4) |
 | `safe` | Read + Write | the above, plus run, exec, stop, kill (8) |
@@ -167,6 +170,11 @@ container's isolation onto your real files.
 - Honest tool annotations. Every tool declares MCP read-only and destructive hints that match
   what it can actually touch, so your client knows the stakes and can ask before anything
   risky runs.
+- Guard your client config. Tidesman's tools cannot change the access mode; it is pinned by
+  the `--mode` argument in your MCP client's configuration file. That file lives outside
+  Tidesman's control, so protect it accordingly: a client that grants its assistant broad
+  filesystem access would let the assistant edit its own mode. Every audit-log line records
+  the mode the call ran under, so any change leaves a visible trail.
 
 ## Privacy Policy
 
