@@ -134,6 +134,13 @@ Nine container tools, each tagged by what it can do (Read, Write, or Destructive
 | `container_kill` | Write | stop a container by sending it a signal (SIGKILL by default) |
 | `container_delete` | Destructive | remove a container |
 
+What the capability tags mean: a **Read** tool observes state and changes nothing. A **Write**
+tool changes a container's state but never removes it; the container survives and can be
+inspected or restarted. **Destructive** is reserved for removing the container itself. Your MCP
+client may separately mark some write tools (exec, stop, kill) as destructive, based on the MCP
+hints each tool carries: those tools can end work or change data inside a container, even
+though the container itself survives.
+
 ## Access modes: safe by default
 
 Tidesman runs at one of three authority levels, set with `--mode=`, and it starts in the
