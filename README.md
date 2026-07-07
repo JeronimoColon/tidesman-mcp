@@ -9,6 +9,8 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/github/v/release/JeronimoColon/tidesman-mcp?style=flat-square&amp;label=release&amp;color=1BAAC0" alt="Latest release">
+  <img src="https://img.shields.io/badge/dynamic/regex?url=https%3A%2F%2Fraw.githubusercontent.com%2FJeronimoColon%2Fhomebrew-tidesman%2Fmain%2FCasks%2Ftidesman.rb&amp;search=version%20%22(%5B%5E%22%5D%2B)%22&amp;replace=v%241&amp;label=homebrew&amp;style=flat-square&amp;color=E08A2E" alt="Homebrew tap version">
   <img src="https://img.shields.io/badge/macOS%2026-Apple%20Silicon-103E63?style=flat-square" alt="macOS 26 · Apple Silicon">
   <img src="https://img.shields.io/badge/MCP-server-187E9E?style=flat-square" alt="MCP server">
   <img src="https://img.shields.io/badge/license-EULA-475569?style=flat-square" alt="License: EULA">
