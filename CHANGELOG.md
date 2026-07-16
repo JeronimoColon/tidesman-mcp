@@ -2,6 +2,21 @@
 
 Notable changes to Tidesman. This project follows [Semantic Versioning](https://semver.org).
 
+## [0.2.0] - 2026-07-16
+
+- Five new tools for container images, bringing the surface to fourteen: `image_list` and
+  `image_inspect` (read), `image_pull` and `image_tag` (write, available in safe mode), and
+  `image_delete` (destructive, full mode only). Your assistant can now find, inspect, pull,
+  tag, and remove the images your containers run from.
+- Host-folder mounts are now scoped to explicit roots. Pass
+  `--allow-host-mounts=/path/one[,/path/two]`; a mount is allowed only when its real path,
+  with symlinks resolved, sits under one of those folders. The old bare `--allow-host-mounts`,
+  which allowed any path, is no longer accepted.
+- Clearer, more consistent error messages across every tool, backed by the container engine's
+  completed typed-error contract.
+- Launched directly in a terminal with no MCP client attached, Tidesman now prints a one-line
+  hint explaining what it is, instead of waiting silently.
+
 ## [0.1.3] - 2026-07-05
 
 - Every tool is now advertised in every access mode; the mode controls which ones may run,

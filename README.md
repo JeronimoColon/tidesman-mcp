@@ -122,7 +122,8 @@ pass the flags as arguments.
 
 ## What it does
 
-Nine container tools, each tagged by what it can do (Read, Write, or Destructive):
+Fourteen tools, each tagged by what it can do (Read, Write, or Destructive). Nine act on
+containers, five on images:
 
 | Tool | Capability | What it does |
 |---|---|---|
@@ -135,13 +136,18 @@ Nine container tools, each tagged by what it can do (Read, Write, or Destructive
 | `container_stop` | Write | gracefully stop a running container |
 | `container_kill` | Write | stop a container by sending it a signal (SIGKILL by default) |
 | `container_delete` | Destructive | remove a container |
+| `image_list` | Read | list the images already downloaded |
+| `image_inspect` | Read | show an image's full details |
+| `image_pull` | Write | download an image from a registry |
+| `image_tag` | Write | give an existing image another name |
+| `image_delete` | Destructive | remove an image |
 
 What the capability tags mean: a **Read** tool observes state and changes nothing. A **Write**
 tool changes a container's state but never removes it; the container survives and can be
 inspected or restarted. **Destructive** is reserved for removing the container itself. Your MCP
 client may separately mark some write tools (exec, stop, kill) as destructive, based on the MCP
 hints each tool carries: those tools can end work or change data inside a container, even
-though the container itself survives. In every mode, all nine tools stay visible to your
+though the container itself survives. In every mode, all fourteen tools stay visible to your
 assistant; a tool the mode locks says so in its description and refuses until you raise the
 mode.
 
@@ -153,13 +159,14 @@ assistant; the mode controls which of them may run.
 
 | Mode | Allows | Tools callable |
 |---|---|---|
-| `read-only` (default) | Read | ping, list, inspect, logs (4) |
-| `safe` | Read + Write | the above, plus run, exec, stop, kill (8) |
-| `full` | Read + Write + Destructive | all nine, including delete |
+| `read-only` (default) | Read | ping, list, inspect, logs, and the two image reads (6) |
+| `safe` | Read + Write | the above, plus run, exec, stop, kill, and image pull and tag (12) |
+| `full` | Read + Write + Destructive | all fourteen, including both delete tools |
 
-A separate flag, `--allow-host-mounts`, is required before `container_run` may mount a folder
-from your Mac into a container; it is off by default because a host mount reaches outside the
-container's isolation onto your real files.
+A separate flag, `--allow-host-mounts=/path/one[,/path/two]`, names the host folders
+`container_run` may mount into a container; it is off by default because a host mount reaches
+outside the container's isolation onto your real files. A mount is allowed only when its real
+path (with symlinks resolved) sits under one of the folders you list.
 
 ## Security and trust
 

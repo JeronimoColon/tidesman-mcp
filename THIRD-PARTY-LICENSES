@@ -1,6 +1,6 @@
 THIRD-PARTY-LICENSES
 
-Tidesman 0.1.0 is distributed as a closed-source binary built with Swift Package Manager. It incorporates the open-source packages listed below, and each remains licensed under its own terms. The full license text for every package follows, along with the NOTICE files those licenses require to be preserved. This document lists every package resolved in the build graph; some are transitive dependencies and may not be linked into the shipped binary, but they are included here for completeness.
+Tidesman is distributed as a closed-source binary built with Swift Package Manager. It incorporates the open-source packages listed below, and each remains licensed under its own terms. The full license text for every package follows, along with the NOTICE files those licenses require to be preserved. This document lists every package resolved in the build graph; some are transitive dependencies and may not be linked into the shipped binary, but they are included here for completeness.
 
 
 ================================================================================
@@ -11,11 +11,11 @@ async-http-client 1.34.0
   Source:  https://github.com/swift-server/async-http-client.git
   License: Apache-2.0
 
-container 1.0.0
+container 1.1.0
   Source:  https://github.com/apple/container.git
   License: Apache-2.0
 
-containerization 0.33.3
+containerization 0.35.0
   Source:  https://github.com/apple/containerization.git
   License: Apache-2.0
 
