@@ -122,34 +122,40 @@ pass the flags as arguments.
 
 ## What it does
 
-Fourteen tools, each tagged by what it can do (Read, Write, or Destructive). Nine act on
-containers, five on images:
+Twenty tools, each tagged by what it can do (Read, Write, or Destructive). Three report on
+or repair the engine itself, eleven act on containers, six on images:
 
 | Tool | Capability | What it does |
 |---|---|---|
 | `system_ping` | Read | check the container service is reachable |
+| `system_disk_usage` | Read | report disk use for images, containers, and volumes |
+| `system_repair` | Write | re-download the engine's own infrastructure images |
 | `container_list` | Read | list containers |
 | `container_inspect` | Read | show a container's full details |
 | `container_logs` | Read | fetch a container's recent output |
 | `container_run` | Write | create and start a container from an image |
 | `container_exec` | Write | run a command inside a running container |
+| `container_start` | Write | start an existing stopped container |
+| `container_restart` | Write | gracefully stop and then start a container |
 | `container_stop` | Write | gracefully stop a running container |
 | `container_kill` | Write | stop a container by sending it a signal (SIGKILL by default) |
 | `container_delete` | Destructive | remove a container |
+| `container_prune` | Destructive | remove every stopped container in one sweep |
 | `image_list` | Read | list the images already downloaded |
 | `image_inspect` | Read | show an image's full details |
 | `image_pull` | Write | download an image from a registry |
 | `image_tag` | Write | give an existing image another name |
 | `image_delete` | Destructive | remove an image |
+| `image_prune` | Destructive | remove untagged (or all unused) images in one sweep |
 
 What the capability tags mean: a **Read** tool observes state and changes nothing. A **Write**
-tool changes a container's state but never removes it; the container survives and can be
-inspected or restarted. **Destructive** is reserved for removing the container itself. Your MCP
-client may separately mark some write tools (exec, stop, kill) as destructive, based on the MCP
-hints each tool carries: those tools can end work or change data inside a container, even
-though the container itself survives. In every mode, all fourteen tools stay visible to your
-assistant; a tool the mode locks says so in its description and refuses until you raise the
-mode.
+tool changes state but never removes a resource; a stopped container survives a start or a
+restart and an engine repair only restores what the engine needs. **Destructive** is reserved
+for removing containers or images. Your MCP client may separately mark some write tools (exec,
+stop, kill, restart) as destructive, based on the MCP hints each tool carries: those tools can
+end work or change data inside a container, even though the container itself survives. In
+every mode, all twenty tools stay visible to your assistant; a tool the mode locks says so in
+its description and refuses until you raise the mode.
 
 ## Access modes: safe by default
 
@@ -159,9 +165,9 @@ assistant; the mode controls which of them may run.
 
 | Mode | Allows | Tools callable |
 |---|---|---|
-| `read-only` (default) | Read | ping, list, inspect, logs, and the two image reads (6) |
-| `safe` | Read + Write | the above, plus run, exec, stop, kill, and image pull and tag (12) |
-| `full` | Read + Write + Destructive | all fourteen, including both delete tools |
+| `read-only` (default) | Read | ping, disk usage, list, inspect, logs, and the two image reads (7) |
+| `safe` | Read + Write | the above, plus run, exec, start, restart, stop, kill, image pull and tag, and the engine repair (16) |
+| `full` | Read + Write + Destructive | all twenty, including the delete and prune tools |
 
 A separate flag, `--allow-host-mounts=/path/one[,/path/two]`, names the host folders
 `container_run` may mount into a container; it is off by default because a host mount reaches
@@ -176,6 +182,8 @@ path (with symlinks resolved) sits under one of the folders you list.
   require an explicit flag.
 - Audited. Every tool call is recorded to `~/Library/Logs/tidesman/audit.log` and the macOS
   unified log: its name, its arguments (with secret-like values redacted), and its outcome.
+  A destructive call also records exactly what it removed, and arguments a tool does not
+  declare are recorded by name, so a mistaken call leaves a visible trace.
 - Honest tool annotations. Every tool declares MCP read-only and destructive hints that match
   what it can actually touch, so your client knows the stakes and can ask before anything
   risky runs.

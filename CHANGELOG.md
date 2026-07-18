@@ -2,6 +2,27 @@
 
 Notable changes to Tidesman. This project follows [Semantic Versioning](https://semver.org).
 
+## [0.3.0] - 2026-07-18
+
+- Six new tools bring the surface to twenty. Containers gain `container_start` (boot an
+  existing stopped container; `container_run` always creates a new one) and
+  `container_restart` (a graceful stop, then a start, as one operation). The engine itself
+  gains `system_disk_usage` (a read-only view of what images, containers, and volumes are
+  using, with the engine's estimate of reclaimable space) and `system_repair` (re-download
+  the engine's own infrastructure images, the sanctioned fix for a broken engine). Cleanup
+  gains `container_prune` (remove every stopped container in one sweep) and `image_prune`
+  (remove untagged images, or every unused image with `scope: "unused"`), both restricted
+  to full mode.
+- The audit log now answers "what did the assistant destroy" on its own: a destructive call
+  records exactly what it removed, and arguments a tool does not declare are recorded by
+  name (never by value), so a mistaken call leaves a visible trace instead of vanishing.
+- Every tool's input schema now declares its exact field set, so a client that validates
+  can catch a stray argument before the call is made, and enum values accept surrounding
+  whitespace.
+- Partial failures report honestly: a restart whose start half fails, a prune interrupted
+  mid-sweep, and a delete whose cleanup fails all say so in their results rather than
+  claiming success.
+
 ## [0.2.0] - 2026-07-16
 
 - Five new tools for container images, bringing the surface to fourteen: `image_list` and
